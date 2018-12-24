@@ -32,7 +32,7 @@ class Chart extends React.Component {
   }
 
   render() {
-    const { name, info, negative } = this.props;
+    const { name, info, negative, id } = this.props;
     return (
       <div className="chart">
         <h1>{name}</h1>
@@ -59,6 +59,12 @@ class Chart extends React.Component {
           </LineChart>
         </div>
         <p>{info}</p>
+        <p>
+          <a
+            href={`https://data.worldbank.org/indicator/${id}?locations=BD&view=chart`}>
+            সোর্স
+          </a>
+        </p>
       </div>
     );
   }

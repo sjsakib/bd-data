@@ -12,16 +12,16 @@ const indicators = [
     negative: false
   },
   {
-    id: 'SI.POV.GINI',
-    name: 'GINI index (World Bank estimate)',
-    info: 'জিনি সহগ কোন দেশের আয় বা সম্পদের বণ্টনের অসমতা বোঝানোর জন্য ব্যবহার করা হয়।',
-    negative: true
-  },
-  {
     id: 'SH.DYN.MORT',
     name: 'Mortality rate, under-5 (per 1,000 live births)',
     info: 'Less is better',
     negative: true,
+  },
+  {
+    id: 'SI.POV.GINI',
+    name: 'GINI index (World Bank estimate)',
+    info: 'জিনি সহগ কোন দেশের আয় বা সম্পদের বণ্টনের অসমতা বোঝানোর জন্য ব্যবহার করা হয়।',
+    negative: true
   },
   {
     id: 'SI.DST.10TH.10',
