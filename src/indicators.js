@@ -14,7 +14,7 @@ const indicators = [
   {
     id: 'SI.POV.GINI',
     name: 'GINI index (World Bank estimate)',
-    info: 'Less is better',
+    info: 'জিনি সহগ কোন দেশের আয় বা সম্পদের বণ্টনের অসমতা বোঝানোর জন্য ব্যবহার করা হয়।',
     negative: true
   },
   {
