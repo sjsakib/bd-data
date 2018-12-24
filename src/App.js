@@ -10,15 +10,13 @@ class App extends Component {
     return (
       <div className="App ui grid stackable">
         <div className="ui row">
-          <div className="eleven wide column">
+          <div className="twelve wide column">
             <Chart
-              info={indicator.info}
-              name={indicator.name}
-              id={indicator.id}
+              {...indicator}
             />
           </div>
-          <div className="five wide column">
-            <h1>More indicators</h1>
+          <div className="four wide column">
+            <h1>Indicators</h1>
             <div className="ui middle aligned selection list">
               {indicators.map((indicator, i) => (
                 <div
@@ -26,7 +24,7 @@ class App extends Component {
                   key={indicator.id}
                   onClick={() => this.setState({ currentIndicator: i })}>
                   <div className="content">
-                    <h3 className="header">{indicator.name}</h3>
+                    <div className="header">{indicator.name}</div>
                     <div className="description">{indicator.info}</div>
                   </div>
                 </div>

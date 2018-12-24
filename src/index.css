@@ -19,6 +19,6 @@ body {
 	cursor: pointer;
 }
 
-.list.item.active {
-	
+.App {
+	margin-top: 10px !important;
 }
