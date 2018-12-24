@@ -36,18 +36,28 @@ class Chart extends React.Component {
     return (
       <div className="chart">
         <h1>{name}</h1>
-        <LineChart width={700} height={400} data={this.state.data}>
-          <Line connectNulls={true} type="monotone" dataKey="value" stroke={negative ? 'red': 'green'} />
-          <CartesianGrid stroke="#ccc" vertical={false} />
-          <ReferenceLine x="1991" stroke="blue" />
-          <ReferenceLine x="1996" stroke="blue" />
-          <ReferenceLine x="2001" stroke="blue" />
-          <ReferenceLine x="2006" stroke="blue" />
-          <ReferenceLine x="2009" stroke="blue" />
-          <XAxis dataKey="date" />
-          <YAxis dataKey="value" tickFormatter={(v) => numeral(v).format('0.0a') }/>
-          <Tooltip />
-        </LineChart>
+        <div className="chart-container">
+          <LineChart width={700} height={400} data={this.state.data}>
+            <Line
+              connectNulls={true}
+              type="monotone"
+              dataKey="value"
+              stroke={negative ? 'red' : 'green'}
+            />
+            <CartesianGrid stroke="#ccc" vertical={false} />
+            <ReferenceLine x="1991" stroke="blue" />
+            <ReferenceLine x="1996" stroke="blue" />
+            <ReferenceLine x="2001" stroke="blue" />
+            <ReferenceLine x="2006" stroke="blue" />
+            <ReferenceLine x="2009" stroke="blue" />
+            <XAxis dataKey="date" />
+            <YAxis
+              dataKey="value"
+              tickFormatter={v => numeral(v).format('0.0a')}
+            />
+            <Tooltip />
+          </LineChart>
+        </div>
         <p>{info}</p>
       </div>
     );
