@@ -18,6 +18,12 @@ const indicators = [
     negative: true,
   },
   {
+    id: 'EG.ELC.ACCS.ZS',
+    name: 'Access to electricity (% of population)',
+    info: 'More is better',
+    negative: false
+  },
+  {
     id: 'SI.POV.GINI',
     name: 'GINI index (World Bank estimate)',
     info: 'জিনি সহগ কোন দেশের আয় বা সম্পদের বণ্টনের অসমতা বোঝানোর জন্য ব্যবহার করা হয়।',
@@ -35,6 +41,7 @@ const indicators = [
     info: 'More is better',
     negative: false
   }
+  
 ];
 
 export default indicators;
