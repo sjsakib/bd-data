@@ -9,6 +9,7 @@ import {
   ReferenceLine
 } from 'recharts';
 import numeral from 'numeral';
+import FacebookProvider, { Comments,  Like } from 'react-facebook-sdk';
 import wb from './lib/wb';
 
 class Chart extends React.Component {
@@ -65,6 +66,10 @@ class Chart extends React.Component {
             সোর্স
           </a>
         </p>
+        <FacebookProvider appId="162637991074423">
+          <Like href={'https://bddata.netlify.com/'+id} showCount share />
+          <Comments href={'https://bddata.netlify.com/'+id} />
+        </FacebookProvider>
       </div>
     );
   }

@@ -10,11 +10,16 @@ body {
 
 .chart {
 	text-align: center;
-	overflow-x: auto;
 }
 
 .chart-container {
-	width: 700px;
+	margin: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+	text-align: center;
+}
+
+.recharts-wrapper {
 	margin: auto;
 }
 
