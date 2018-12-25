@@ -9,7 +9,7 @@ import {
   ReferenceLine
 } from 'recharts';
 import numeral from 'numeral';
-import FacebookProvider, { Comments,  Like } from 'react-facebook-sdk';
+import FacebookProvider, { Comments, Like } from 'react-facebook-sdk';
 import wb from './lib/wb';
 
 class Chart extends React.Component {
@@ -59,17 +59,21 @@ class Chart extends React.Component {
             <Tooltip />
           </LineChart>
         </div>
-        <p>{info}</p>
         <p>
-          <a
+          {info} (<a
             href={`https://data.worldbank.org/indicator/${id}?locations=BD&view=chart`}>
             সোর্স
-          </a>
+          </a>)
         </p>
+        <div className="fb">
         <FacebookProvider appId="162637991074423">
-          <Like href={'https://bddata.netlify.com/'+id} showCount share />
-          <Comments href={'https://bddata.netlify.com/'+id} />
+          <Like href={'https://bddata.netlify.com/' + id} showCount share />
+          <Comments
+            href={'https://bddata.netlify.com/' + id}
+            orderBy="social"
+          />
         </FacebookProvider>
+        </div>
       </div>
     );
   }
