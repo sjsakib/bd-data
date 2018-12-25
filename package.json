@@ -7,12 +7,13 @@
     "numeral": "^2.0.6",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
     "recharts": "^1.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp _redirects build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
